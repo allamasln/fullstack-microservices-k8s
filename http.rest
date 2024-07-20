@@ -1,0 +1,32 @@
+@baseUrl = http://posts.com
+@postId = e272eb2a
+
+# Get all posts
+GET posts.com/posts
+
+###
+
+# Create a new post
+POST posts.com/posts/create
+Content-Type: application/json
+
+{
+  "title": "My Post"
+}
+
+###
+
+# Get comments of a post
+GET {{baseUrl}}/posts/{{postId}}/comments
+
+###
+
+# Create a comment of a post
+POST {{baseUrl}}/posts/{{postId}}/comments
+Content-Type: application/json
+
+{
+  "content": "My Comment"
+}
+
+
